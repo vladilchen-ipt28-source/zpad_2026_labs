@@ -53,7 +53,7 @@
   1. Перейдіть на офіційний сайт репозиторію за посиланням: [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption).
   2. Завантажте архів датасету (`individual+household+electric+power+consumption.zip`).
   3. Розпакуйте архів. Усередині буде файл `household_power_consumption.txt` (вагою ~127 МБ).
-  4. Перемістіть цей файл у корінь папки з лабораторною роботою поруч із файлами ноутбуків.
+  4. Перемістіть цей файл у корінь папки з лабораторною роботою поруч із файлами.
 
 ---
 
