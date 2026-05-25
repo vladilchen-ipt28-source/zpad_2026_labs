@@ -1,3 +1,23 @@
-numpy>=1.24.0
-matplotlib>=3.7.0
-scipy>=1.10.0
+# 5. Прив'язка динамічного оновлення до кожного віджета (Сучасне API ipywidgets)
+s_amp.observe(update_plot, names='value')
+s_freq.observe(update_plot, names='value')
+s_phase.observe(update_plot, names='value')
+s_mean.observe(update_plot, names='value')
+s_cov.observe(update_plot, names='value')
+s_cutoff.observe(update_plot, names='value')
+ch_noise.observe(update_plot, names='value')
+
+# 6. Верстка та послідовне виведення елементів інтерфейсу на екран
+controls = widgets.VBox([
+    widgets.HBox([s_amp, s_mean]),
+    widgets.HBox([s_freq, s_cov]),
+    widgets.HBox([s_phase, s_cutoff]),
+    widgets.HBox([ch_noise, btn_reset])
+])
+
+# Виводимо пульти керування, а під ними — один фіксований контейнер для графіків
+display(controls)
+display(output_container)
+
+# Перший примусовий запуск для побудови початкового графіка
+update_plot()
